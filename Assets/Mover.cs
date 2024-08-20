@@ -15,10 +15,7 @@ public class Mover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {    
-        float xValue = Input.GetAxis("Horizontal") *Time .deltaTime *moveSpeed;
-        float zValue = Input.GetAxis("Vertical") *Time.deltaTime *moveSpeed;
-
-        transform.Translate(xValue,0,zValue);
+        MovePlayer();
     }
 
     void PrintInstruction() {
@@ -27,5 +24,11 @@ public class Mover : MonoBehaviour
         Debug.Log("Dont hit the walls!");
     }
     
+    void MovePlayer(){
+        float xValue = Input.GetAxis("Horizontal") *Time .deltaTime *moveSpeed;
+        float zValue = Input.GetAxis("Vertical") *Time.deltaTime *moveSpeed;
 
+        transform.Translate(xValue,0,zValue);
+
+    }
 }
