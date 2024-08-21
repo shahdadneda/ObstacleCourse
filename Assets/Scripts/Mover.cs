@@ -25,8 +25,8 @@ public class Mover : MonoBehaviour
     }
     
     void MovePlayer(){
-        float xValue = Input.GetAxis("Horizontal") *Time .deltaTime *moveSpeed;
-        float zValue = Input.GetAxis("Vertical") *Time.deltaTime *moveSpeed;
+        float xValue = Input.GetAxis("Horizontal") *Time .deltaTime *moveSpeed /2;
+        float zValue = Input.GetAxis("Vertical") *Time.deltaTime *moveSpeed/2;
 
         transform.Translate(xValue,0,zValue);
 
